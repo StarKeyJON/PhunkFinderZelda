@@ -37,10 +37,8 @@
   "proxy": "http://localhost:8080",
   "scripts": {
     "start": "PORT=2000 react-scripts start",
-    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "serve": "npm run start --prefix src/server",
     "client": "cd ../Users/jon/Desktop/code/phunks/server/zelda-js-master && npm run start",
     "dev": "concurrently \"cd ./Zelda/zelda-js-master && npm install && npm run start\" \"npm run start\""
   },
