@@ -20,4 +20,4 @@ CMD cd ../../
 COPY . ./
 
 # start app
-CMD ["npm", "dev"]
+CMD ["npm","start", "dev"]
