@@ -1,11 +1,11 @@
 # pull official base image
-FROM node:13.12.0-alpine
+FROM node:16
 
 # set working directory
 WORKDIR ./
 
 # add `/app/node_modules/.bin` to $PATH
-ENV PATH ./node_modules/.bin:$PATH
+ENV PATH /client/node_modules/.bin:$PATH
 
 # install app dependencies
 COPY package.json ./
@@ -13,11 +13,15 @@ COPY package-lock.json ./
 CMD cd ./Zelda/zelda-js-master
 COPY package.json ./
 COPY package-lock.json ./
-CMD cd ../../
+CMD cd ../../client
+
+RUN npm install
 
 
 # add app
-COPY . ./
+COPY . .
+
+EXPOSE 8080
 
 # start app
-CMD ["npm","start", "dev"]
+CMD ["npm", "dev"]
