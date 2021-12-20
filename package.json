@@ -42,7 +42,7 @@
     "eject": "react-scripts eject",
     "serve": "npm run start --prefix src/server",
     "client": "cd ../Users/jon/Desktop/code/phunks/server/zelda-js-master && npm run start",
-   "dev": "concurrently \"cd ./Zelda/zelda-js-master && npm install && npm run start\" \"npm run start\""
+   "dev": "concurrently \"cd ./Zelda/zelda-js-master && npm run start\" \"npm run start\""
   },
   "eslintConfig": {
     "extends": [
@@ -66,6 +66,9 @@
     "@babel/preset-react": "^7.16.0",
     "@rarible/sdk": "^0.7.16",
     "concurrently": "^6.5.0",
-    "eslint-plugin-react-hooks": "^4.3.0"
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
   }
 }
