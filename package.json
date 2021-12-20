@@ -40,7 +40,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "client": "cd ../Users/jon/Desktop/code/phunks/server/zelda-js-master && npm run start",
-    "dev": "concurrently \"cd ./Zelda/zelda-js-master && npm install && npm run start\" \"npm run start\""
+    "dev": "concurrently \"cd ./Zelda/zelda-js-master && npm run start\" \"npm run start\""
   },
   "eslintConfig": {
     "extends": [
