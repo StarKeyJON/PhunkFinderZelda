@@ -10,10 +10,14 @@ ENV PATH /client/node_modules/.bin:$PATH
 # install app dependencies
 COPY package.json ./
 COPY package-lock.json ./
-CMD cd ./Zelda/zelda-js-master
+
+
+RUN npm install
+
+CMD ["cd", "./Zelda/zelda-js-master"]
 COPY package.json ./
 COPY package-lock.json ./
-CMD cd ../../client
+CMD ["cd", "../../"]
 
 RUN npm install
 
@@ -21,7 +25,5 @@ RUN npm install
 # add app
 COPY . .
 
-EXPOSE 8080
-
 # start app
-CMD ["npm", "start", "dev"]
+CMD ["npm","start", "dev"]
